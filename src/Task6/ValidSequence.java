@@ -19,7 +19,9 @@ public class ValidSequence {
 
         // Iterate over `array`
         for(Integer num1 : array){
+            //iterating over sequence
             for (Integer num2 : sequence){
+                //cheeking for equality
                 if(num1==num2){
                     arrsList.add(num1);
                     break;
@@ -48,7 +50,8 @@ public class ValidSequence {
         // Iterate over `array`
         for (int num : array) {
             if (seqIndex < sequence.length && num == sequence[seqIndex]) {
-                seqIndex++;  // Move to next sequence element
+                // Move to next sequence element
+                seqIndex++;
             }
         }
      // Check if all sequence elements matched

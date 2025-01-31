@@ -6,10 +6,11 @@ import java.util.Set;
 public class Intersection {
 
     public static int[] findIntersection(int[] nums1, int[] nums2){
-
+        // Handle null input
         if(nums1==null|| nums2==null){
             return new int[0];
         }
+        // comparing array in nested loops and storing in set to avoid duplications
         Set<Integer> listOfCommonNumbers = new HashSet<>();
         for(int i = 0; i<nums1.length; i++){
             for(int j = 0; j<nums2.length; j++){
@@ -21,6 +22,7 @@ public class Intersection {
             }
 
         }
+        // stream in set to map it to int array
         int[] result = listOfCommonNumbers.stream().mapToInt(Integer::intValue).toArray();
 
 
@@ -48,7 +50,7 @@ public class Intersection {
             }
         }
 
-        // Convert the resultSet to an int[] using streams
+        // stream in set to map it to int array
         return resultSet.stream().mapToInt(Integer::intValue).toArray();
     }
 }
